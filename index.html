@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Alina Siddiqui ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Ambient Background Particles -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Floating Hearts -->
+  <div id="floatingHearts"></div>
+
+  <!-- Rose Petals -->
+  <div id="rosePetals"></div>
+
+  <!-- Music Player -->
+  <div id="musicPlayer" class="music-player hidden">
+    <button id="playPauseBtn" class="music-btn">♪</button>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="0.6" class="volume-slider" />
+    <button id="muteBtn" class="music-btn mute-btn">🔊</button>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- HERO SECTION -->
+  <!-- ═══════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero-bg" style="background-image:url('slide1.jpeg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-stars" id="heroStars"></div>
+    <div class="hero-content">
+      <p class="hero-pre-title">To The Most Precious Person In My Life</p>
+      <h1 class="hero-title">Alina Siddiqui <span class="heart-pulse">❤️</span></h1>
+      <p class="hero-tagline">My Today, My Tomorrow, My Forever In Sha Allah</p>
+      <button id="enterBtn" class="enter-btn">Enter Our Love Story ❤️</button>
+    </div>
+    <div class="scroll-hint hidden" id="scrollHint">↓</div>
+  </section>
+
+  <!-- Main Content (hidden until enter clicked) -->
+  <div id="mainContent" class="main-content hidden">
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- TYPING SECTION -->
+    <!-- ═══════════════════════════════════ -->
+    <section class="typing-section">
+      <div class="typing-container">
+        <p id="typingText" class="typing-text"></p>
+        <span class="typing-cursor">|</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- PHOTO LOVE STORY -->
+    <!-- ═══════════════════════════════════ -->
+    <section class="love-story-section">
+      <div class="section-header">
+        <h2 class="section-title">Our Story ❤️</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="slides-container">
+
+        <div class="story-slide" data-index="0">
+          <div class="slide-inner">
+            <div class="slide-img-wrap">
+              <img src="slide1.jpeg" alt="Together" loading="lazy" data-pos="mid" />
+              <div class="slide-img-glow"></div>
+            </div>
+            <div class="slide-quote-wrap">
+              <div class="quote-card glass">
+                <span class="quote-mark open">"</span>
+                <p class="quote-text">Thousands of miles, countless moments apart, yet every road in my heart still leads to you, Alina.</p>
+                <span class="quote-mark close">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-slide" data-index="1">
+          <div class="slide-inner reverse">
+            <div class="slide-img-wrap">
+              <img src="slide2.jpeg" alt="Yellow dress fairy lights" loading="lazy" data-pos="mid-top" />
+              <div class="slide-img-glow"></div>
+            </div>
+            <div class="slide-quote-wrap">
+              <div class="quote-card glass">
+                <span class="quote-mark open">"</span>
+                <p class="quote-text">Some people shine under lights, but you make the lights look beautiful.</p>
+                <span class="quote-mark close">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-slide" data-index="2">
+          <div class="slide-inner">
+            <div class="slide-img-wrap">
+              <img src="slide3.jpeg" alt="Red dress clock tower" loading="lazy" data-pos="mid-top" />
+              <div class="slide-img-glow"></div>
+            </div>
+            <div class="slide-quote-wrap">
+              <div class="quote-card glass">
+                <span class="quote-mark open">"</span>
+                <p class="quote-text">Even time itself seems to pause whenever I look at you.</p>
+                <span class="quote-mark close">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-slide" data-index="3">
+          <div class="slide-inner reverse">
+            <div class="slide-img-wrap">
+              <img src="slide4.jpeg" alt="Black outfit portrait" loading="lazy" data-pos="top" />
+              <div class="slide-img-glow"></div>
+            </div>
+            <div class="slide-quote-wrap">
+              <div class="quote-card glass">
+                <span class="quote-mark open">"</span>
+                <p class="quote-text">The more I look at you, the more I realize that Allah truly answered my prayers through you.</p>
+                <span class="quote-mark close">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-slide" data-index="4">
+          <div class="slide-inner">
+            <div class="slide-img-wrap">
+              <img src="slide5.jpeg" alt="Pink embroidered outfit" loading="lazy" data-pos="top" />
+              <div class="slide-img-glow"></div>
+            </div>
+            <div class="slide-quote-wrap">
+              <div class="quote-card glass">
+                <span class="quote-mark open">"</span>
+                <p class="quote-text">I could spend a lifetime listening to your voice and still wish for one more conversation.</p>
+                <span class="quote-mark close">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-slide" data-index="5">
+          <div class="slide-inner reverse">
+            <div class="slide-img-wrap">
+              <img src="slide6.jpeg" alt="Multicolor traditional dress" loading="lazy" data-pos="mid-top" />
+              <div class="slide-img-glow"></div>
+            </div>
+            <div class="slide-quote-wrap">
+              <div class="quote-card glass">
+                <span class="quote-mark open">"</span>
+                <p class="quote-text">You don't just bring beauty wherever you go, you bring warmth, comfort and peace.</p>
+                <span class="quote-mark close">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-slide" data-index="6">
+          <div class="slide-inner">
+            <div class="slide-img-wrap">
+              <img src="slide7.jpeg" alt="Red polo ice cream" loading="lazy" data-pos="mid-top" />
+              <div class="slide-img-glow"></div>
+            </div>
+            <div class="slide-quote-wrap">
+              <div class="quote-card glass">
+                <span class="quote-mark open">"</span>
+                <p class="quote-text">My favorite thing isn't your smile, it's knowing I am the reason behind it.</p>
+                <span class="quote-mark close">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-slide" data-index="7">
+          <div class="slide-inner reverse">
+            <div class="slide-img-wrap square">
+              <img src="slide8.jpeg" alt="Red outfit monument" loading="lazy" data-pos="mid-top" />
+              <div class="slide-img-glow"></div>
+            </div>
+            <div class="slide-quote-wrap">
+              <div class="quote-card glass">
+                <span class="quote-mark open">"</span>
+                <p class="quote-text">Every version of you becomes my new favorite version of you.</p>
+                <span class="quote-mark close">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-slide" data-index="8">
+          <div class="slide-inner">
+            <div class="slide-img-wrap">
+              <img src="slide9.jpeg" alt="White dress portrait" loading="lazy" data-pos="mid-top" />
+              <div class="slide-img-glow"></div>
+            </div>
+            <div class="slide-quote-wrap">
+              <div class="quote-card glass">
+                <span class="quote-mark open">"</span>
+                <p class="quote-text">If elegance had a face, it would look something like this.</p>
+                <span class="quote-mark close">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-slide" data-index="9">
+          <div class="slide-inner reverse">
+            <div class="slide-img-wrap">
+              <img src="slide10.jpeg" alt="Cream beige indoor portrait" loading="lazy" data-pos="mid-top" />
+              <div class="slide-img-glow"></div>
+            </div>
+            <div class="slide-quote-wrap">
+              <div class="quote-card glass">
+                <span class="quote-mark open">"</span>
+                <p class="quote-text">You have no idea how many times you become the best part of my day.</p>
+                <span class="quote-mark close">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-slide" data-index="10">
+          <div class="slide-inner">
+            <div class="slide-img-wrap">
+              <img src="slide1.jpeg" alt="Together again" loading="lazy" data-pos="mid" />
+              <div class="slide-img-glow"></div>
+            </div>
+            <div class="slide-quote-wrap">
+              <div class="quote-card glass">
+                <span class="quote-mark open">"</span>
+                <p class="quote-text">No matter how far life takes us, my favorite place will always be beside you.</p>
+                <span class="quote-mark close">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- THINGS I LOVE ABOUT ALINA -->
+    <!-- ═══════════════════════════════════ -->
+    <section class="love-cards-section">
+      <div class="section-header">
+        <h2 class="section-title">Things I Love About Alina ❤️</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="love-cards-grid">
+        <div class="love-card glass">❤️ Your Smile</div>
+        <div class="love-card glass">❤️ Your Kindness</div>
+        <div class="love-card glass">❤️ Your Caring Heart</div>
+        <div class="love-card glass">❤️ Your Voice</div>
+        <div class="love-card glass">❤️ Your Intelligence</div>
+        <div class="love-card glass">❤️ Your Strength</div>
+        <div class="love-card glass">❤️ Your Beautiful Soul</div>
+        <div class="love-card glass">❤️ The Way You Make Me Feel Loved</div>
+        <div class="love-card glass">❤️ The Way You Make Ordinary Moments Special</div>
+        <div class="love-card glass">❤️ Everything That Makes You You</div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- LOVE LETTER SECTION -->
+    <!-- ═══════════════════════════════════ -->
+    <section class="letter-section">
+      <div class="section-header">
+        <h2 class="section-title">A Letter From My Heart ❤️</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="letter-card glass">
+        <div class="letter-content" id="loveLetterContent">I loveeeeeee youuuuuuuuu sooooooooooooo muchhhhhhhhhh Alinaaaaaaa Siddiquiiiiiiiiii. Honestly, my love, I do not think there are enough words in any language to truly explain what I feel for you because every single word that exists feels too small and too limited compared to the love that lives inside my heart for you. Every time I try to explain how much I love you, I find myself lost because what I feel for you goes far beyond words, far beyond explanations, and far beyond anything I have ever experienced in my entire life. You are not just someone I love. You are the most beautiful part of my world, the most precious blessing in my life, and the most cherished person my heart has ever known.
+
+Every single day, every single hour, every single minute, and every single second, I find myself falling in love with you all over again. The most beautiful thing is that I never want this feeling to stop. I want to keep falling in love with you forever and ever for the rest of my life because loving you is the most beautiful thing that has ever happened to me.
+
+Mere pyaaaareeeee gudddeeeee, whenever your name comes into my mind, my heart instantly feels warm, peaceful, and happy in a way that I cannot even describe. You have this incredible ability to make everything feel better without even trying. Sometimes I sit quietly and think about you and I find myself smiling for no reason. Sometimes I open your photos and just stare at them for hours because looking at you genuinely makes my heart feel so full of happiness and love. I look at your beautiful face and wonder how Allah created someone so beautiful, so adorable, so precious, and so perfect for my heart.
+
+Every time I see you, I feel like I am looking at the most beautiful person in the entire universe because, to me, there is nobody who can ever compare to you. Nobody can ever have your beauty, your kindness, your innocence, your softness, your heart, or your presence because you are completely unique and completely irreplaceable in my life.
+
+Wallahi, my love, I thank Allah Subhanahu wa Ta'ala again and again and again for you because you are one of the greatest blessings He has ever given me, and I can never thank Him enough for bringing someone as amazing as you into my life. You are my happiness, my comfort, my peace, my safe place, and my favorite thought. Every morning when I wake up, you are the first thought on my mind, and every night before I sleep, you are my last thought as well. You stay in my heart all day long, and no matter what I am doing, there is always a part of me thinking about you, missing you, loving you, and praying for you.
+
+And my love, there is something that my heart feels every single day and every single moment, and that is how incredibly much I miss you. I miss you all the time in ways that I cannot even fully explain. I miss your presence. I miss your existence. I miss seeing you. I miss talking to you. I miss hearing your voice. I miss your beautiful eyes that I could spend forever looking into. I miss your cute face that instantly melts my heart. I miss your adorable nose. I miss your beautiful smile. I miss your precious expressions, your beautiful presence, and every little detail that makes you who you are. Sometimes I miss you so much that it feels like a part of my heart is constantly searching for you because all it wants is you and only you.
+
+My love, you are genuinely the most beautiful, the most gorgeous, the prettiest, and the most breathtaking person in the entire universe in my eyes. Nobody can ever compare to you because Allah created you so beautifully and so perfectly that every time I think about you, my heart becomes full of love and admiration. You are not only the love of my life, but also the most beautiful blessing Allah has ever blessed me with. Wallahi, I am grateful and thankful to Allah every single day for giving me someone as precious as you. I thank Him again and again for allowing you to be part of my life because you are truly one of the greatest gifts and the most precious treasure I have ever received.
+
+My love, I really miss you always, and all I want is to be with you. I want to spend time with you. I want to share moments with you. I want to stay close to you because being with you is where my heart feels happiest. I want you. I need you. I crave your presence, your existence, your time, your attention, and every beautiful moment that I can spend with you because every second with you feels special, and every moment away from you makes me miss you even more.
+
+What I feel for you is not something temporary, and it is not something that changes with time. Instead, it grows stronger every single day. It feels pure, sincere, genuine, and eternal. It feels like a love that Allah wrote long before we ever met. It feels like our hearts were meant to find each other, and every day that passes only makes me more certain about how deeply and sincerely I love you.
+
+No matter how many messages I write for you, no matter how many paragraphs I dedicate to you, and no matter how many times I tell you that I love you, it still never feels enough because my feelings for you are far bigger than any words I could ever write. I love everything about you, my love. I love your smile because it brightens my darkest days. I love your eyes because I could look into them forever. I love your voice because hearing it instantly brings peace to my heart. I love your laugh because it is one of my favorite sounds in the world. I love your kindness, your innocence, your beautiful heart, your personality, your little habits, your cute moments, and every tiny thing that makes you who you are. I love the way you exist. I love the way you make me feel. I love the way my heart belongs to you completely and wholeheartedly.
+
+You have become such an important part of my life that I genuinely cannot imagine a future without you in it. You are the reason behind so many of my smiles and the source of so much happiness in my heart. Even on difficult days when life feels heavy, one thought of you is enough to make everything feel lighter because you bring a kind of peace and comfort into my life that nobody else ever could.
+
+And In Sha Allah, my love, I want to spend my entire life with you. I want to stand beside you through every happiness, every challenge, every success, and every hardship. I want to protect your heart, care for you, support you, cherish you, respect you, and love you with all the sincerity that exists within me. I want to build a beautiful halal life with you through nikah, and I want every day of my future to begin and end with gratitude for having you by my side.
+
+I pray to Allah with all my heart that He keeps us together, blesses our relationship, fills it with barakah, mercy, love, understanding, happiness, and peace, and grants us the opportunity to be together not only in this dunya but in the aakhirah as well because my love for you is not limited to this world only. It is sincere, deep, everlasting, and forever.
+
+Alinaaaaaaaa Siddiquiiiiiiiiii, my beautiful, precious, adorable, and most beloved gudddeeeee, I loveeeeeeeeeee youuuuuuuuu more than words can ever describe, more than my heart can ever fully express, and more than anything else in this entire universe. You are my happiness, my peace, my comfort, my dream, my blessing, my favorite person, and the most beautiful feeling my heart has ever known. I will continue loving you, admiring you, cherishing you, respecting you, missing you, praying for you, and thanking Allah for you with all my heart forever and alwayssssssssssssssss 🥺🥺🥺🥺🥺🥺🥺🥺🫂🫂🫂🫂🫂🫂🫂🫂❤️❤️❤️❤️❤️❤️💕💕💕💕💕💕💕💕🫂🫂🫂🫂🫂🫂🫂😩😩😩😩😩😩😩😩💕💕💕🫂🫂🫂🥺🥺🥺😚😚😚❤️❤️❤️❤️</div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- LOVE COUNTER -->
+    <!-- ═══════════════════════════════════ -->
+    <section class="counter-section">
+      <div class="section-header">
+        <h2 class="section-title">Loving You More Every Day ❤️</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="counter-grid">
+        <div class="counter-item glass">
+          <span class="counter-value" id="days">000</span>
+          <span class="counter-label">Days</span>
+        </div>
+        <div class="counter-item glass">
+          <span class="counter-value" id="hours">00</span>
+          <span class="counter-label">Hours</span>
+        </div>
+        <div class="counter-item glass">
+          <span class="counter-value" id="minutes">00</span>
+          <span class="counter-label">Minutes</span>
+        </div>
+        <div class="counter-item glass">
+          <span class="counter-value" id="seconds">00</span>
+          <span class="counter-label">Seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- FINAL CINEMATIC SCENE -->
+    <!-- ═══════════════════════════════════ -->
+    <section class="final-scene">
+      <div class="final-scene-bg" style="background-image:url('slide1.jpeg')"></div>
+      <div class="final-scene-overlay"></div>
+      <div class="final-lines" id="finalLines">
+        <p class="final-line" data-delay="0">"If I had to choose again..."</p>
+        <p class="final-line" data-delay="800">"In every lifetime..."</p>
+        <p class="final-line" data-delay="1600">"In every universe..."</p>
+        <p class="final-line" data-delay="2400">"In every possibility..."</p>
+        <p class="final-line" data-delay="3200">"I would still choose you."</p>
+        <p class="final-line final-name" data-delay="4200">Alina Siddiqui ❤️</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- FINAL BUTTON & TEXT -->
+    <!-- ═══════════════════════════════════ -->
+    <section class="final-button-section">
+      <button id="foreverBtn" class="forever-btn">Forever Yours ❤️</button>
+      <div id="iLoveYouMsg" class="ilove-msg hidden">I Love You Alina ❤️</div>
+      <p class="final-text">Thank You For Being The Most Beautiful Part Of My Life.</p>
+    </section>
+
+    <!-- Explosion canvas -->
+    <canvas id="explosionCanvas"></canvas>
+
+  </div><!-- end mainContent -->
+
+  <script src="script.js"></script>
+</body>
+</html>
